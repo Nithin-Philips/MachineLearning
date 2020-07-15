@@ -14,7 +14,7 @@ app = Flask(__name__)
 def home():
     return "hello there"
 
-
+'''
 @app.route("/api",methods=["POST"])
 def api():
     img = request.files['image'].stream
@@ -30,6 +30,7 @@ def api():
         prediction = 'NORMAL'
     os.remove("image.jpeg")
     return prediction
+    '''
 
 if __name__ == '__main__':
     app.run(debug=True)

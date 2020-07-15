@@ -1,6 +1,6 @@
 import numpy as np
-from tensorflow.keras.preprocessing import image
-from tensorflow.keras.models import load_model
+from keras.preprocessing import image
+from keras.models import load_model
 
 from flask import Flask,request
 import os

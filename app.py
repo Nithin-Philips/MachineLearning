@@ -1,15 +1,13 @@
+'''
 import numpy as np
 from tensorflow.keras.preprocessing import image
 from tensorflow.keras.models import load_model
+'''
 from flask import Flask
 import os
-import base64
-from flask import request,jsonify
 app = Flask(__name__)
-import tempfile
-model = load_model("saved_model.h5")
-import binascii
-from PIL import Image
+#model = load_model("saved_model.h5")
+#from PIL import Image
 
 
 @app.route('/')

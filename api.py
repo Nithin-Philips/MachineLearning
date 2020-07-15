@@ -12,9 +12,13 @@ import binascii
 from PIL import Image
 
 
-
-@app.route("/",methods=["POST"])
+@app.route('/')
 def home():
+    return "hello there"
+
+
+@app.route("/api",methods=["POST"])
+def api():
     img = request.files['image'].stream
     im = Image.open(img)
     im = im.save('image.jpeg')

@@ -1,20 +1,18 @@
-'''
 import numpy as np
-from tensorflow.keras.preprocessing import image
-from tensorflow.keras.models import load_model
-'''
+from tensorflow.python.keras.preprocessing import image
+from tensorflow.python.keras.models import load_model
+
 from flask import Flask,request
 import os
 app = Flask(__name__)
-#model = load_model("saved_model.h5")
-#from PIL import Image
+model = load_model("saved_model.h5")
+from PIL import Image
 
 
 @app.route('/')
 def home():
     return "hello there"
 
-'''
 @app.route("/api",methods=["POST"])
 def api():
     img = request.files['image'].stream
@@ -30,7 +28,7 @@ def api():
         prediction = 'NORMAL'
     os.remove("image.jpeg")
     return prediction
-    '''
+
 
 if __name__ == '__main__':
     app.run(debug=True)

@@ -1,8 +1,7 @@
-python==3.6
 Flask==1.1.2
 tensorflow==1.15
 numpy==1.19.0
 gunicorn==19.9.0
 numpy==1.19.0
 h5py==2.10.0
-PIL==7.2.0
+Pillow==7.2.0

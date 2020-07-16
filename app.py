@@ -1,14 +1,13 @@
 import numpy as np
 from tensorflow.keras.preprocessing import image
 from tensorflow.keras.models import load_model
-
+from flask_cors import CORS
 from flask import Flask,request
 import os
 app = Flask(__name__)
+CORS(app)
 model = load_model("saved_model.h5")
 from PIL import Image
-
-
 
 
 @app.route("/",methods=["GET","POST"])

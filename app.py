@@ -17,7 +17,7 @@ def api():
     else:
         img = request.files['image'].stream
         im = Image.open(img)
-        im = im.save('image.jpeg')
+        im.save('image.jpeg')
         test_image = image.load_img('image.jpeg',target_size=(64,64)) 
         test_image = image.img_to_array(test_image)
         test_image = np.expand_dims(test_image, axis=0)
